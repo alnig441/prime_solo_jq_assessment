@@ -18,8 +18,14 @@ $(document).ready(function(){
 	});
 
 	$('#main').on('click', '#color', function(){
-		$(this).parent().addClass('change');
+		if($(this).parent().hasClass('change')){
+			$(this).parent().removeClass('change');
+		}
+		else{
+			$(this).parent().addClass('change');
 
+		}
+		
 	});
 
 
